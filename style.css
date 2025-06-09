@@ -1,60 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 body {
-  font-family: 'Comic Neue', cursive;
-  background-color: #fff0f5;
-  color: #444;
+  font-family: 'Shadows Into Light', cursive;
+  background: #fdfdfd;
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 header {
-  background-color: #ffe4ec;
+  background: #f5faff;
   padding: 20px;
   text-align: center;
-  border-bottom: 3px dashed #f8cce2;
+  border-bottom: 2px dashed #a2c3ff;
 }
 
 header h1 {
-  color: #d96ba0;
-  margin: 0;
-  font-size: 2rem;
+  color: #4973c5;
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #c66da5;
+  color: #5277c3;
   font-weight: bold;
 }
 
 .container {
-  max-width: 800px;
-  margin: 30px auto;
+  max-width: 760px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #fff9fb;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #fbd7ea;
+  background: #fff;
+  border: 1px solid #cfdcec;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  line-height: 1.8;
 }
 
 img {
   max-width: 100%;
-  border-radius: 12px;
+  border-radius: 6px;
+  border: 1px solid #cdd5e0;
+  margin: 10px 0;
 }
 
 .btn {
   display: inline-block;
-  background-color: #f88fbf;
-  color: white;
-  padding: 10px 20px;
   margin-top: 20px;
+  padding: 10px 22px;
+  background: #4973c5;
+  color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #34599d;
 }
 
 footer {
   text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
-  color: #999;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #aaa;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
 }
