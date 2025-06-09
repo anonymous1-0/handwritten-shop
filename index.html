@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simple Handwritten Notes</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <h1>My Handwritten Notes</h1>
+    <h1>My Simple Handwritten Notes</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="testimonials.html">Testimonials</a>
+      <a href="portfolio.html">Free Notes</a>
     </nav>
   </header>
 
   <div class="container">
-    <h2>Welcome 💙</h2>
-    <p>
-      I write simple, clean notes with a blue pen on single-line notebook paper.  
-      If you like what I create, you can support me with just ₹1.  
-      It’s small, but it’s filled with kindness.
-    </p>
+    <p>Hi! I make simple handwritten notes using a blue pen on single-line paper. You can read or download them for free.</p>
+    <p>If you like anything, feel free to donate ₹1 ❤️</p>
 
-    <img src="assets/upi-qr.png" alt="UPI QR Code to pay ₹1">
+    <div class="qr">
+      <img src="assets/upi-qr.png" alt="UPI QR Code">
+      <p>Scan this code to donate ₹1 via UPI 🙏</p>
+    </div>
 
-    <p style="font-weight: bold;">Scan above to support with ₹1 🙏</p>
-
-    <a class="btn" href="portfolio.html">See My Work</a>
+    <div id="google_translate_element"></div>
   </div>
 
   <footer>
-    Made with 💙 by someone who still believes in pen & paper
+    Made with kindness ✍️ | No login needed | Trust-based sharing
   </footer>
+
+  <!-- Google Translate (Indian languages only) -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'hi,gu,ta,te,bn,kn,mr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
