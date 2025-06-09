@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Free Notes</title>
+  <title>Download Handwritten Notes</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <h1>My Free Notes 📚</h1>
+    <h1>Free Notes</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Free Notes</a>
@@ -16,31 +16,32 @@
   </header>
 
   <div class="container">
-    <p>You can download any of these notes freely. They're written from the heart with a blue pen 💙</p>
+    <h2>Download My Handwritten Notes</h2>
+    <p>Select your preferred language to download the note:</p>
 
-    <ul>
-      <li><a href="assets/notes/story1.pdf" download>Download: A Small Story About Kindness</a></li>
-      <li><a href="assets/notes/poem1.pdf" download>Download: A Poem on Rain</a></li>
-      <li><a href="assets/notes/thoughts.pdf" download>Download: My Thoughts on Peace</a></li>
-    </ul>
+    <label for="languageSelect">Choose Language:</label>
+    <select id="languageSelect">
+      <option value="hi">Hindi</option>
+      <option value="gu">Gujarati</option>
+    </select>
 
-    <div id="google_translate_element"></div>
+    <br/><br/>
+    <button class="btn" onclick="downloadNote()">Download</button>
   </div>
 
   <footer>
-    Sharing free knowledge 🌱 | Support if you can via UPI
+    Notes written with sincerity 💙
   </footer>
 
-  <!-- Google Translate -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'hi,gu,ta,te,bn,kn,mr',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
+  <script>
+    function downloadNote() {
+      const lang = document.getElementById("languageSelect").value;
+      if (lang === "hi") {
+        window.location.href = "assets/notes/story-hindi.pdf";
+      } else if (lang === "gu") {
+        window.location.href = "assets/notes/story-gujarati.pdf";
+      }
     }
   </script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
