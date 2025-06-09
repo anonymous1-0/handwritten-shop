@@ -1,55 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #fffdf7;
-  color: #333;
+  font-family: 'Comic Neue', cursive;
+  background-color: #fff0f5;
+  color: #444;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  max-width: 500px;
-  margin: 60px auto;
-  text-align: center;
+header {
+  background-color: #ffe4ec;
   padding: 20px;
-  background: #fdfdfd;
-  border: 1px solid #ddd;
+  text-align: center;
+  border-bottom: 3px dashed #f8cce2;
+}
+
+header h1 {
+  color: #d96ba0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #c66da5;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff9fb;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #fbd7ea;
+}
+
+img {
+  max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-h1 {
-  font-size: 26px;
-  color: #2b2b2b;
-}
-
-.qr-box {
-  margin: 30px 0;
-}
-
-.qr-box img {
-  width: 200px;
-  border: 5px solid #eee;
-  border-radius: 10px;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  background: #4caf50;
+  background-color: #f88fbf;
   color: white;
-  padding: 12px 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 8px;
-  transition: background 0.3s ease;
 }
 
-.btn:hover {
-  background: #45a049;
-}
-
-.note {
-  font-size: 13px;
-  margin-top: 30px;
-  color: #888;
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #999;
 }
