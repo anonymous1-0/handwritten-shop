@@ -20,9 +20,32 @@
       background-color: #3a5ca0;
     }
 
+    .qr {
+      text-align: center;
+      margin-top: 20px;
+    }
+
     .qr img {
       max-width: 200px;
-      margin-top: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .qr p {
+      font-size: 15px;
+      margin: 10px 0 5px;
+    }
+
+    .qr .upi-id {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .warning {
+      font-size: 13px;
+      color: #b22222;
+      font-style: italic;
+      margin-top: 5px;
     }
   </style>
 </head>
@@ -39,12 +62,14 @@
     <p>I write stories, poems, and thoughtful quotes purely out of passion. You may read or download them freely.</p>
     <p>If you feel they are helpful or meaningful, you are welcome to support with just ₹1. Thank you 💙</p>
 
-    <!-- New View Notes button -->
     <center><a class="btn" href="portfolio.html">📚 View My Notes</a></center>
 
     <div class="qr">
-      <img src="assets/upi-qr.png" alt="UPI QR Code">
+      <img src="assets/upi-qr.png" alt="PhonePe UPI QR Code for donating ₹1 to my official UPI ID">
       <p>Scan this code to donate ₹1 via UPI 🙏</p>
+      <p class="warning">✔ Please verify my name before sending.<br>
+        ❌ Do not trust any other QR claiming to be mine.<br>
+        🌐 Valid only at: <strong>anonymous1-0.github.io</strong></p>
     </div>
 
     <div id="google_translate_element"></div>
