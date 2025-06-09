@@ -3,85 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free Handwritten Notes</title>
+  <title>Simple Handwritten Notes</title>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      border: 1px solid #dbe6f9;
-      border-radius: 10px;
-      padding: 16px;
-      background: #fff;
-      box-shadow: 0 0 6px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      font-size: 1.1rem;
-      color: #375a9e;
-      margin-bottom: 6px;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
     .btn {
-      background: #4d79c4;
+      display: inline-block;
+      background-color: #4d79c4;
       color: white;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 6px;
-      border: none;
-      cursor: pointer;
-    }
-
-    #languageModal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      width: 300px;
-    }
-
-    .modal-content select {
-      padding: 8px;
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .modal-content button {
+      text-decoration: none;
       margin-top: 15px;
+    }
+
+    .btn:hover {
+      background-color: #3a5ca0;
+    }
+
+    .qr {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .qr img {
+      max-width: 200px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .qr p {
+      font-size: 15px;
+      margin: 10px 0 5px;
+    }
+
+    .qr .upi-id {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .warning {
+      font-size: 13px;
+      color: #b22222;
+      font-style: italic;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Free Notes</h1>
+    <h1>My Simple Handwritten Notes</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Free Notes</a>
@@ -89,79 +59,36 @@
   </header>
 
   <div class="container">
-    <div class="cards">
-      <div class="card">
-        <img src="assets/note1.jpg" alt="Story Note">
-        <h3>Short Story: The Lost Pencil</h3>
-        <p>A heartwarming short story about a lost pencil and kindness in school life.</p>
-        <button class="btn" onclick="openModal('note1')">Download</button>
-      </div>
+    <p>I write stories, poems, and thoughtful quotes purely out of passion. You may read or download them freely.</p>
+    <p>If you feel they are helpful or meaningful, you are welcome to support with just ₹1. Thank you 💙</p>
 
-      <div class="card">
-        <img src="assets/note2.jpg" alt="Poem Note">
-        <h3>Poem: A Page of Rain</h3>
-        <p>A soft handwritten poem about rain, rhythm and calm moments.</p>
-        <button class="btn" onclick="openModal('note2')">Download</button>
-      </div>
-    </div>
-  </div>
+    <center><a class="btn" href="portfolio.html">📚 View My Notes</a></center>
 
-  <!-- Language selection modal -->
-  <div id="languageModal">
-    <div class="modal-content">
-      <h3>Select Language</h3>
-      <select id="langSelect">
-        <option value="en">English</option>
-        <option value="hi">Hindi</option>
-        <option value="gu">Gujarati</option>
-      </select>
-      <button class="btn" onclick="downloadSelected()">Download</button>
+    <div class="qr">
+      <img src="assets/upi-qr.png" alt="PhonePe UPI QR Code for donating ₹1 to my official UPI ID">
+      <p>Scan this code to donate ₹1 via UPI 🙏</p>
+      <p class="warning">✔ Please verify my name before sending.<br>
+        ❌ Do not trust any other QR claiming to be mine.<br>
+        🌐 Valid only at: <strong>anonymous1-0.github.io</strong></p>
     </div>
+
+    <div id="google_translate_element"></div>
   </div>
 
   <footer>
-    All notes are written with love and peace 💙
+    Made with kindness ✍️ | No login needed | Trust-based sharing
   </footer>
 
-  <script>
-    let currentNote = "";
-
-    function openModal(noteId) {
-      currentNote = noteId;
-      document.getElementById('languageModal').style.display = 'flex';
+  <!-- Google Translate (English, Hindi, Gujarati only) -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,gu',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
     }
-
- <script>
-  let currentNote = "";
-
-  function openModal(noteId) {
-    currentNote = noteId;
-    document.getElementById('languageModal').style.display = 'flex';
-  }
-
-  function downloadSelected() {
-    const lang = document.getElementById("langSelect").value;
-    let file = "";
-
-    if (currentNote === "note1") {
-      if (lang === "hi") file = "The lost pencil folder/The lost pencil - hindi.pdf";
-      else if (lang === "gu") file = "The lost pencil folder/The lost pencil - gujarati.pdf";
-      else file = "The lost pencil folder/The lost pencil - english.pdf";
-    }
-    else if (currentNote === "note2") {
-      if (lang === "hi") file = "assets/notes/poem-hindi.pdf";
-      else if (lang === "gu") file = "assets/notes/poem-gujarati.pdf";
-      else file = "assets/notes/poem-english.pdf";
-    }
-
-    document.getElementById('languageModal').style.display = 'none';
-    window.location.href = file;
-  }
-
-  window.onclick = function(event) {
-    const modal = document.getElementById('languageModal');
-    if (event.target === modal) modal.style.display = 'none';
-  }
   </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
