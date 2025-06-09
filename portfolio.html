@@ -33,15 +33,16 @@
     Notes written with sincerity 💙
   </footer>
 
-  <script>
-    function downloadNote() {
-      const lang = document.getElementById("languageSelect").value;
-      if (lang === "hindi") {
-        window.location.href = "assets/notes/story-hindi.pdf";
-      } else if (lang === "gujarati") {
-        window.location.href = "assets/notes/story-gujarati.pdf";
-      }
+   <!-- Google Translate (English, Hindi, Gujarati only) -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'english,hindi,gujarati',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
     }
   </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
