@@ -125,35 +125,36 @@
 
   <script>
     let currentNote = "";
-
+  
     function openModal(noteId) {
       currentNote = noteId;
       document.getElementById('languageModal').style.display = 'flex';
     }
-
+  
     function downloadSelected() {
       const lang = document.getElementById("langSelect").value;
       let file = "";
-
+  
       if (currentNote === "note1") {
-        if (lang === "hi") file = "assets/notes/story-hindi.pdf";
-        else if (lang === "gu") file = "assets/notes/story-gujarati.pdf";
-        else file = "assets/notes/story-english.pdf";
+        if (lang === "hi") file = "The lost pencil folder/The lost pencil - hindi.pdf";
+        else if (lang === "gu") file = "The lost pencil folder/The lost pencil - gujarati.pdf";
+        else file = "The lost pencil folder/The lost pencil - english.pdf";
       }
       else if (currentNote === "note2") {
         if (lang === "hi") file = "assets/notes/poem-hindi.pdf";
         else if (lang === "gu") file = "assets/notes/poem-gujarati.pdf";
         else file = "assets/notes/poem-english.pdf";
       }
-
+  
       document.getElementById('languageModal').style.display = 'none';
       window.location.href = file;
     }
-
+  
     window.onclick = function(event) {
       const modal = document.getElementById('languageModal');
       if (event.target === modal) modal.style.display = 'none';
     }
   </script>
+  
 </body>
 </html>
